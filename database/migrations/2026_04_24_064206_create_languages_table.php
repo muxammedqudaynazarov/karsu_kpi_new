@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('languages', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('id')->unique()->primary()->index();
             $table->json('name');
             $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();

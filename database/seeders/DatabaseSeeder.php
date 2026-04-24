@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             UniversitySeeder::class,
             OptionSeeder::class,
             DepartmentSeeder::class,
+            LanguageSeeder::class,
         ]);
     }
 }
