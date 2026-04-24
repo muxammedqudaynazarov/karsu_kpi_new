@@ -15,6 +15,7 @@ return new class extends Migration {
             // Amal qilishi
             $table->string('observation')->nullable();
             $table->foreign('observation')->references('code')->on('observances')->cascadeOnDelete();
+            $table->foreignId('report_id')->constrained('reports')->cascadeOnDelete();
             $table->string('integrate')->nullable();
             $table->enum('checking', ['manual', 'auto', 'ai'])->default('manual');
             $table->enum('upload', ['0', '1'])->default('0');
