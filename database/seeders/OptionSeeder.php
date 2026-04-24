@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Evaluation;
 use App\Models\Observance;
+use App\Models\Option;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -92,6 +93,12 @@ class OptionSeeder extends Seeder
                 'ru' => 'До окончания срока деятельности в Совете',
                 'en' => 'Until the end of their term of office in the Council',
             ]
+        ]);
+
+
+        Option::create([
+            'key' => 'title',
+            'value' => 'KarSU KPI',
         ]);
     }
 }
