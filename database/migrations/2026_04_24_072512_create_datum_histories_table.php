@@ -13,6 +13,10 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->enum('type', ['success', 'error', 'info', 'warning'])->default('success');
             $table->text('message')->nullable();
+            /*
+            01 - file created
+            */
+            $table->string('message_type')->default('01');
             $table->timestamps();
         });
     }
