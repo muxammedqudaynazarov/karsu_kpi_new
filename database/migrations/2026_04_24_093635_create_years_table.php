@@ -8,8 +8,9 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('years', function (Blueprint $table) {
-            $table->integer('id')->index()->unique()->primary();
+            $table->unsignedBigInteger('id')->index()->unique()->primary();
             $table->string('name');
+            $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }
