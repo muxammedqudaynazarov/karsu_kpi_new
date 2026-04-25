@@ -16,8 +16,10 @@ return new class extends Migration {
             $table->string('observation')->nullable();
             $table->foreign('observation')->references('code')->on('observances')->cascadeOnDelete();
             $table->foreignId('report_id')->constrained('reports')->cascadeOnDelete();
+            $table->foreignId('formula_id')->nullable()->constrained('formulas')->cascadeOnDelete();
             $table->string('integrate')->nullable();
             $table->enum('checking', ['manual', 'auto', 'ai'])->default('manual');
+            $table->text('ai_prompt')->nullable();
             $table->enum('upload', ['0', '1'])->default('0');
             $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();

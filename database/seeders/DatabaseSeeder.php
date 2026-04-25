@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             OptionSeeder::class,
             DepartmentSeeder::class,
             LanguageSeeder::class,
+            CriterionSeeder::class,
         ]);
     }
 }

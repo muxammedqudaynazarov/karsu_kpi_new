@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Evaluation;
+use App\Models\Formula;
 use App\Models\Observance;
 use App\Models\Option;
+use App\Models\Report;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -99,6 +101,31 @@ class OptionSeeder extends Seeder
         Option::create([
             'key' => 'title',
             'value' => 'KarSU KPI',
+        ]);
+
+        Formula::create([
+            'name' => [
+                'uz' => 'Raqobat reyting tizimida',
+                'kaa' => 'Báseki reyting sistemasında',
+                'ru' => 'В рейтинговой системе конкуренции',
+                'en' => 'Competition in the rating system',
+            ]
+        ]);
+        Formula::create([
+            'name' => [
+                'uz' => 'Maksimal ballga asoslangan',
+                'kaa' => 'Maksimal ballǵa tiykarlanǵan',
+                'ru' => 'На основе максимального балла',
+                'en' => 'Based on maximum score',
+            ]
+        ]);
+        Formula::create([
+            'name' => [
+                'uz' => 'Cheklanmagan ball asosida',
+                'kaa' => 'Sheklenbegen ball tiykarında',
+                'ru' => 'На основе неограниченных баллов',
+                'en' => 'Unlimited points',
+            ]
         ]);
     }
 }
